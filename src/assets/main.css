@@ -2,15 +2,16 @@
 
 :root {
   font-family:
-    Inter,
+    'Avenir Next',
+    'Trebuchet MS',
     ui-sans-serif,
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
     sans-serif;
-  color: #0f172a;
-  background: #f8fafc;
+  color: #2c2c2c;
+  background: #fffef5;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -36,4 +37,64 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  color: #2c2c2c;
+  background: #ffd93d;
+}
+
+.app-shell {
+  background-color: #fffef5;
+}
+
+.app-shell > main {
+  background-color: #fffef5;
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 4.5rem,
+      rgb(255 107 107 / 30%) 4.5rem,
+      rgb(255 107 107 / 30%) 4.625rem,
+      transparent 4.625rem
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 31px,
+      rgb(78 205 196 / 18%) 31px,
+      rgb(78 205 196 / 18%) 32px
+    );
+}
+
+@media (max-width: 639px) {
+  .app-shell > main {
+    background-image:
+      linear-gradient(
+        90deg,
+        transparent 0,
+        transparent 2rem,
+        rgb(255 107 107 / 24%) 2rem,
+        rgb(255 107 107 / 24%) 2.1rem,
+        transparent 2.1rem
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent 0,
+        transparent 31px,
+        rgb(78 205 196 / 16%) 31px,
+        rgb(78 205 196 / 16%) 32px
+      );
+  }
 }
